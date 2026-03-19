@@ -82,3 +82,14 @@
     margin-bottom: 20px;
 
 }
+@media (max-width: 768px) {
+    .slogan-container,
+    .slogan-top {
+        padding: 10px; /* уменьшаем отступы */
+    }
+    
+    .full-background {
+        min-height: 300px; /* чтобы на телефоне фон не занимал полэкрана */
+        background-position: center center; /* центрируем */
+    }
+}
