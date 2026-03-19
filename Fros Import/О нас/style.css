@@ -92,8 +92,8 @@
     margin: 20px 0;
 }
 .value-card {
-    width: 100%;             
-    max-width: 600px;         
+    width: 100%;
+    max-width: 600px;
     background: white;
     border-radius: 8px;
     padding: 20px 25px;
@@ -118,16 +118,15 @@
 }
 .value-card h4 {
     color: #2c3e50;
-    font-size: 1.6rem;       /* немного крупнее */
+    font-size: 1.6rem;
     margin-bottom: 10px;
     font-weight: 600;
 }
 .value-card p {
-    font-size: 1.4rem;       /* комфортный размер */
+    font-size: 1.4rem;
     color: #555;
     margin: 0;
     line-height: 1.5;
-    /* текст будет переноситься по умолчанию */
 }
 
 /* ===== КОМАНДА ===== */
@@ -199,18 +198,22 @@
 .back-link a:hover {
     background-color: #cc5500;
 }
+
+/* Убираем левую полосу у блока с ценностями */
 .about-item.values-item::before {
     display: none;
 }
+
+/* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===== */
 @media (max-width: 768px) {
     .value-card {
-        width: 100%; /* карточки на всю ширину */
+        width: 100%;
         max-width: 100%;
         margin: 10px 0;
     }
 
     .team-member {
-        width: 100%; /* члены команды в столбик */
+        width: 100%;
         max-width: 300px;
         margin: 10px auto;
     }
@@ -218,21 +221,8 @@
     .about-subtitle {
         font-size: 2rem;
     }
-   @media (max-width: 768px) {
-    .value-card {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
-    }
-    .team-member {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-    }
-    .about-subtitle {
-        font-size: 2rem;
-    }
+
     .about-item {
         padding: 15px;
-    } 
+    }
 }
