@@ -88,6 +88,22 @@
     .slogan-top {
         padding: 10px;
     }
+     .compact-slogan {
+        padding: 8px; /* уменьшим отступы */
+        width: 100%;  /* чтобы занимал всю ширину */
+    }
+    .latin-quote {
+        font-size: 14px; /* уменьшим шрифт */
+        white-space: normal; /* разрешим перенос */
+        word-break: break-word; /* перенос по словам */
+    }
+    .russian-translation {
+        font-size: 12px;
+    }
+    .quote-decoration {
+        font-size: 30px; /* кавычку тоже уменьшим */
+        margin-right: 5px;
+    }
     .full-background {
         min-height: 300px;
         background-position: center center;

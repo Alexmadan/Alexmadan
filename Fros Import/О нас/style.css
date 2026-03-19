@@ -206,7 +206,7 @@
 
 /* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===== */
 @media (max-width: 768px) {
-    .value-card {
+     .value-card {
         width: 100%;
         max-width: 100%;
         margin: 10px 0;
@@ -216,6 +216,19 @@
         width: 100%;
         max-width: 300px;
         margin: 10px auto;
+        text-align: center;
+    }
+
+    /* Добавляем разделение имени и должности */
+    .team-member h4 {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .team-member p {
+        font-size: 1.2rem;
+        margin-top: 0;
+        color: #666;
     }
 
     .about-subtitle {
