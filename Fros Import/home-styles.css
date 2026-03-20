@@ -108,4 +108,8 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+    .full-background {
+        background-image: none;
+        background-color: #f5f5f5;
+    }
 }
