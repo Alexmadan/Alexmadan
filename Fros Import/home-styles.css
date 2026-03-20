@@ -93,12 +93,10 @@
         width: 100%;  /* чтобы занимал всю ширину */
     }
     .latin-quote {
-        font-size: 14px; /* уменьшим шрифт */
-        white-space: normal; /* разрешим перенос */
-        word-break: break-word; /* перенос по словам */
+        font-size: 11px; 
     }
     .russian-translation {
-        font-size: 12px;
+        font-size: 10px;
     }
     .quote-decoration {
         font-size: 30px; /* кавычку тоже уменьшим */
@@ -106,6 +104,8 @@
     }
     .full-background {
         min-height: 300px;
-        background-position: center center;
+        background-position: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
