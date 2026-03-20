@@ -73,23 +73,39 @@
     opacity: 0.7;
 }
 .full-background {
-   width: 100%;
-   min-height: 800px;
-   background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
+    width: 100%;
+    min-height: 800px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     position: relative;
     margin-bottom: 20px;
-
 }
+
+/* Адаптация для мобильных */
 @media (max-width: 768px) {
     .slogan-container,
     .slogan-top {
-        padding: 10px; /* уменьшаем отступы */
+        padding: 10px;
     }
-    
+     .compact-slogan {
+        padding: 8px; /* уменьшим отступы */
+        width: 100%;  /* чтобы занимал всю ширину */
+    }
+    .latin-quote {
+        font-size: 14px; /* уменьшим шрифт */
+        white-space: normal; /* разрешим перенос */
+        word-break: break-word; /* перенос по словам */
+    }
+    .russian-translation {
+        font-size: 12px;
+    }
+    .quote-decoration {
+        font-size: 30px; /* кавычку тоже уменьшим */
+        margin-right: 5px;
+    }
     .full-background {
-        min-height: 300px; /* чтобы на телефоне фон не занимал полэкрана */
-        background-position: center center; /* центрируем */
+        min-height: 300px;
+        background-position: contain;
     }
 }
