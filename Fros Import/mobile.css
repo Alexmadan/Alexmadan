@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    /* Убираем фон, делаем сплошной цвет */
+    .full-background {
+        background-image: none !important;
+        background-color: #f5f5f5;
+        min-height: 300px;
+    }
+
+    /* Слоган — компактно */
+    .compact-slogan {
+        padding: 6px;
+        border-width: 2px;
+    }
+    .latin-quote {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    .russian-translation {
+        font-size: 10px;
+    }
+    .quote-decoration {
+        font-size: 24px;
+        margin-right: 4px;
+    }
+}
