@@ -1,25 +1,41 @@
 @media (max-width: 768px) {
-    /* Убираем фон, делаем сплошной цвет */
+    /* ===== Убираем фон ===== */
     .full-background {
         background-image: none !important;
         background-color: #f5f5f5 !important;
         min-height: 300px !important;
     }
 
-    /* Слоган — компактно */
-    .compact-slogan {
-        padding: 6px !important;
-        border-width: 2px !important;
+    /* ===== Слоган на всю ширину, сверху ===== */
+    .slogan-container,
+    .slogan-top {
+        padding: 0 !important;
     }
+
+    .compact-slogan {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
     .latin-quote {
         font-size: 12px !important;
         line-height: 1.2 !important;
+        margin-bottom: 2px !important;
     }
+
     .russian-translation {
         font-size: 10px !important;
     }
+
     .quote-decoration {
         font-size: 24px !important;
-        margin-right: 4px !important;
+        margin-right: 5px !important;
     }
 }
