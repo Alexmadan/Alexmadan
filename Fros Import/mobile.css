@@ -2,24 +2,24 @@
     /* Убираем фон, делаем сплошной цвет */
     .full-background {
         background-image: none !important;
-        background-color: #f5f5f5;
-        min-height: 300px;
+        background-color: #f5f5f5 !important;
+        min-height: 300px !important;
     }
 
     /* Слоган — компактно */
     .compact-slogan {
-        padding: 6px;
-        border-width: 2px;
+        padding: 6px !important;
+        border-width: 2px !important;
     }
     .latin-quote {
-        font-size: 12px;
-        line-height: 1.2;
+        font-size: 12px !important;
+        line-height: 1.2 !important;
     }
     .russian-translation {
-        font-size: 10px;
+        font-size: 10px !important;
     }
     .quote-decoration {
-        font-size: 24px;
-        margin-right: 4px;
+        font-size: 24px !important;
+        margin-right: 4px !important;
     }
 }
