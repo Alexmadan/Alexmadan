@@ -1,17 +1,18 @@
 @media (max-width: 768px) {
-    /* ===== Убираем фон ===== */
+    /* Убираем фон, делаем сплошной цвет */
     .full-background {
         background-image: none !important;
         background-color: #f5f5f5 !important;
         min-height: 300px !important;
     }
 
-    /* ===== Слоган на всю ширину, сверху ===== */
+    /* Убираем лишние отступы у контейнеров слогана */
     .slogan-container,
     .slogan-top {
         padding: 0 !important;
     }
 
+    /* Слоган — растягиваем на всю ширину и уменьшаем шрифт */
     .compact-slogan {
         width: 100% !important;
         max-width: none !important;
@@ -22,12 +23,12 @@
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+        gap: 8px !important;
     }
 
     .latin-quote {
         font-size: 12px !important;
         line-height: 1.2 !important;
-        margin-bottom: 2px !important;
     }
 
     .russian-translation {
@@ -36,6 +37,6 @@
 
     .quote-decoration {
         font-size: 24px !important;
-        margin-right: 5px !important;
+        margin-right: 4px !important;
     }
 }
