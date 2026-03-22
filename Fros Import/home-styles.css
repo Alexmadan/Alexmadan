@@ -82,3 +82,235 @@
     margin-bottom: 20px;
 }
 
+/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
+/* Для планшетов и телефонов (ширина до 768px) */
+@media (max-width: 768px) {
+    /* Основной контент */
+    .main-content-area {
+        margin-left: 0;
+        min-height: auto;
+    }
+    
+    /* Слоган */
+    .slogan-container {
+        padding: 10px;
+    }
+    
+    .slogan-top {
+        padding: 10px;
+    }
+    
+    .compact-slogan {
+        padding: 10px 15px;
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .quote-decoration {
+        font-size: 28px;
+        margin-right: 0;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+    
+    .slogan-text {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px 10px;
+    }
+    
+    .latin-quote {
+        font-size: 14px;
+        margin: 0;
+        white-space: normal;
+        display: inline-block;
+    }
+    
+    .russian-translation {
+        font-size: 12px;
+        margin: 0;
+        white-space: normal;
+        display: inline-block;
+    }
+    
+    /* Контентная область */
+    .content-wrapper {
+        padding: 0 10px 10px 10px;
+    }
+    
+    /* Фоновое изображение */
+    .full-background {
+        min-height: 400px;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-attachment: scroll;
+    }
+}
+
+/* Для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    .compact-slogan {
+        padding: 8px 12px;
+        gap: 5px;
+    }
+    
+    .quote-decoration {
+        font-size: 22px;
+        display: inline-block;
+    }
+    
+    .slogan-text {
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+    .latin-quote {
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .russian-translation {
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .full-background {
+        min-height: 300px;
+    }
+}
+
+/* Для экранов от 481px до 768px (оптимизация для планшетов) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .slogan-text {
+        flex-direction: row;
+    }
+    
+    .latin-quote::after {
+        content: "—";
+        margin: 0 8px;
+    }
+    
+    .full-background {
+        min-height: 450px;
+    }@media (max-width: 768px) {
+    .main-content-area {
+        margin-left: 0;
+        min-height: auto;
+    }
+
+    .slogan-container {
+        padding: 10px;
+    }
+
+    .slogan-top {
+        padding: 10px;
+    }
+
+    .compact-slogan {
+        padding: 10px 15px;
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quote-decoration {
+        font-size: 28px;
+        margin-right: 0;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    .slogan-text {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px 10px;
+    }
+
+    .latin-quote {
+        font-size: 14px;
+        margin: 0;
+        white-space: normal;
+        display: inline-block;
+    }
+
+    .russian-translation {
+        font-size: 12px;
+        margin: 0;
+        white-space: normal;
+        display: inline-block;
+    }
+
+    .content-wrapper {
+        padding: 0 10px 10px 10px;
+    }
+
+    .full-background {
+        min-height: 400px;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .compact-slogan {
+        padding: 8px 12px;
+        gap: 5px;
+    }
+
+    .quote-decoration {
+        font-size: 22px;
+        display: inline-block;
+    }
+
+    .slogan-text {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .latin-quote {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .russian-translation {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .full-background {
+        min-height: 300px;
+    }
+}
+
+/* Планшеты (опционально) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .slogan-text {
+        flex-direction: row;
+    }
+
+    .latin-quote::after {
+        content: "—";
+        margin: 0 8px;
+    }
+
+    .full-background {
+        min-height: 450px;
+    }
+    
+}
