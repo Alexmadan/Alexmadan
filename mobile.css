@@ -6,7 +6,7 @@
         min-height: 300px !important;
     }
 
-    /* Принудительно обнуляем отступы у всех возможных родительских контейнеров */
+    /* Сбрасываем все родительские контейнеры */
     .slogan-container,
     .slogan-top,
     .content-wrapper,
@@ -16,9 +16,10 @@
         padding: 0 !important;
         margin: 0 !important;
         box-sizing: border-box !important;
+        display: block !important; /* убираем flex, который мог мешать */
     }
 
-    /* Сам блок слогана — на всю ширину с отступами 10px слева и справа */
+    /* Сам блок слогана */
     .compact-slogan {
         width: calc(100% - 20px) !important;
         margin-left: 10px !important;
@@ -34,7 +35,6 @@
         gap: 6px !important;
     }
 
-    /* Текст слогана */
     .latin-quote {
         font-size: 12px !important;
         line-height: 1.2 !important;
