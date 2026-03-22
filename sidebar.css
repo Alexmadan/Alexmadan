@@ -123,23 +123,4 @@ border: 2px solid #ff6b00;
     .full-background {
         min-height: 400px;
     }
-    @media (max-width: 768px) {
-    .common-sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 5px;
-    }
-    .common-nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .common-nav-link {
-        padding: 8px 12px;
-        font-size: 12px;
-        margin-bottom: 0;
-    }
-    
-
 }
