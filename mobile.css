@@ -1,16 +1,16 @@
 @media (max-width: 768px) {
-    /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
-    /* Убираем фон, делаем сплошной цвет */
+    /* Убираем фон */
     .full-background {
         background-image: none !important;
         background-color: #f5f5f5 !important;
         min-height: 300px !important;
     }
 
-    /* Сбрасываем отступы и ширину у всех родительских блоков слогана */
+    /* Принудительно обнуляем отступы у всех возможных родительских контейнеров */
     .slogan-container,
     .slogan-top,
-    .content-wrapper {
+    .content-wrapper,
+    .main-content-area {
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 !important;
@@ -18,7 +18,7 @@
         box-sizing: border-box !important;
     }
 
-    /* Сам слоган — растягиваем на всю ширину с отступами по 10px */
+    /* Сам блок слогана — на всю ширину с отступами 10px слева и справа */
     .compact-slogan {
         width: calc(100% - 20px) !important;
         margin-left: 10px !important;
