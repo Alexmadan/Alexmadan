@@ -82,45 +82,4 @@ border: 2px solid #ff6b00;
     min-height: 100vh;
     position: relative;
 }
-/* --- Адаптация для телефонов --- */
-@media (max-width: 768px) {
-    /* Меню (сайдбар) */
-    .common-sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 10px;
-    }
 
-    /* Основная область */
-    .main-content-area {
-        margin-left: 0;
-        padding: 15px;
-    }
-      /* Логотип */
-    .common-logo-container {
-        margin-bottom: 15px;
-        padding: 10px;
-    }
-
-    /* Ссылки в меню */
-    .common-nav-link {
-        padding: 10px;
-        font-size: 14px;
-    }
-    /* Слоган (главная страница) */
-    .compact-slogan {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .quote-decoration {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    /* Контейнер с фоновой картинкой */
-    .full-background {
-        min-height: 400px;
-    }
-}
