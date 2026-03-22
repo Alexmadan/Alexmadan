@@ -199,43 +199,4 @@
     background-color: #cc5500;
 }
 
-/* Убираем левую полосу у блока с ценностями */
-.about-item.values-item::before {
-    display: none;
-}
 
-/* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===== */
-@media (max-width: 768px) {
-     .value-card {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
-    }
-
-    .team-member {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    /* Добавляем разделение имени и должности */
-    .team-member h4 {
-        font-size: 1.4rem;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-    .team-member p {
-        font-size: 1.2rem;
-        margin-top: 0;
-        color: #666;
-    }
-
-    .about-subtitle {
-        font-size: 2rem;
-    }
-
-    .about-item {
-        padding: 15px;
-    }
-}
