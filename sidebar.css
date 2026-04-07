@@ -85,7 +85,7 @@ body {
 /* --- Адаптация для телефонов --- */
 @media (max-width: 768px) {
     body {
-        flex-wrap: wrap; /* ✅ теперь блоки переносятся */
+        flex-wrap: wrap;
     }
     .common-sidebar {
         width: 100%;
@@ -114,5 +114,15 @@ body {
         font-size: 14px;
         margin-bottom: 0;
         width: auto;
+    }
+    /* Убираем треугольник, который налезал на текст */
+    .common-nav-link.active::before {
+        content: none;
+    }
+    /* Активная ссылка теперь подчёркивается снизу (аккуратно) */
+    .common-nav-link.active {
+        border-left-color: transparent;
+        border-bottom: 2px solid #ff6b00;
+        border-radius: 0;
     }
 }
