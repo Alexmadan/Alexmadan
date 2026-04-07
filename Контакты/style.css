@@ -1,6 +1,3 @@
-/* Стили для страницы "Контакты" */
-
-/* Заголовок страницы */
 .page-title {
     color: #333;
     margin-bottom: 40px;
@@ -10,7 +7,6 @@
     padding-bottom: 15px;
 }
 
-/* Сетка контактных карточек */
 .contacts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -18,7 +14,6 @@
     margin: 40px 0;
 }
 
-/* Карточка контакта */
 .contact-card {
     background: linear-gradient(145deg, #ffffff, #f8f9fa);
     border-radius: 15px;
@@ -34,14 +29,12 @@
     box-shadow: 0 10px 25px rgba(255, 107, 0, 0.15);
 }
 
-/* Иконка контакта */
 .contact-icon {
     font-size: 48px;
     margin-bottom: 15px;
     line-height: 1;
 }
 
-/* Заголовок карточки */
 .contact-card h3 {
     color: #2c3e50;
     font-size: 22px;
@@ -50,7 +43,6 @@
     border-bottom: 2px solid rgba(255, 107, 0, 0.2);
 }
 
-/* Текст карточки */
 .contact-card p {
     color: #333;
     font-size: 16px;
@@ -58,7 +50,6 @@
     margin: 8px 0;
 }
 
-/* Ссылки в карточке */
 .contact-card a {
     color: #ff6b00;
     text-decoration: none;
@@ -71,14 +62,12 @@
     text-decoration: underline;
 }
 
-/* Дополнительное примечание */
 .contact-note {
     font-size: 14px;
     color: #666;
     margin-top: 10px;
 }
 
-/* Кнопка назад (если нужна, но она уже есть в HTML) */
 .back-link {
     margin-top: 50px;
     text-align: center;
@@ -102,7 +91,7 @@
     box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
 }
 
-/* Адаптация для маленьких экранов */
+/* Адаптация для мобильных */
 @media (max-width: 768px) {
     .contacts-grid {
         grid-template-columns: 1fr;
