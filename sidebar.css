@@ -82,147 +82,32 @@ border: 2px solid #ff6b00;
     min-height: 100vh;
     position: relative;
 }
+/* --- Адаптация для телефонов --- */
 @media (max-width: 768px) {
-    /* Сайдбар становится горизонтальным */
     .common-sidebar {
         width: 100%;
         position: relative;
         height: auto;
         padding: 10px;
-        flex-direction: column;
     }
-
-    /* Основная область без отступа слева */
     .main-content-area {
         margin-left: 0;
         padding: 15px;
     }
-
-    /* Логотип */
     .common-logo-container {
         margin-bottom: 15px;
         padding: 10px;
     }
-
-    /* Меню — горизонтальное, с переносом */
     .common-nav {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
     }
-
-    /* Ссылки в меню */
     .common-nav-link {
         padding: 8px 12px;
         font-size: 14px;
         margin-bottom: 0;
         width: auto;
-    }
-
-    /* Слоган (главная страница) — растягиваем */
-    .compact-slogan {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .quote-decoration {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    /* Контейнер с фоновой картинкой */
-    .full-background {
-        min-height: 300px;
-        background-size: cover;
-        background-position: center;
-    }
-     /* Растягиваем родительские контейнеры слогана */
-    .slogan-container,
-    .slogan-top,
-    .content-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Сам слоган — на всю ширину с отступами по бокам (можно отрегулировать) */
-    .compact-slogan {
-        width: calc(100% - 20px) !important; /* 20px = 10px слева + 10px справа */
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        max-width: none !important;
-    }
-     /* Максимальное переопределение для слогана */
-    .compact-slogan {
-        width: calc(100% - 20px) !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        max-width: none !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-        padding: 8px 12px !important;
-        box-sizing: border-box !important;
-    }
-    .latin-quote {
-        font-size: 14px !important;
-        line-height: 1.3 !important;
-        word-break: keep-all !important; /* чтобы не разбивалось по буквам */
-        white-space: normal !important;
-    }
-    .russian-translation {
-        font-size: 12px !important;
-        line-height: 1.3 !important;
-        word-break: keep-all !important;
-    }
-    .quote-decoration {
-        font-size: 28px !important;
-        margin-right: 5px !important;
-    }
-    /* Убираем возможные лишние тексты (если они не в HTML, а в фоне) */
-    .full-background {
-        background-image: none !important;
-        background-color: #f5f5f5 !important;
-    }
-    /* Родительские контейнеры слогана — на всю ширину */
-    .slogan-container,
-    .slogan-top,
-    .content-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Сам слоган */
-    .compact-slogan {
-        width: calc(100% - 20px) !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        max-width: none !important;
-        padding: 6px !important;
-        gap: 4px !important;
-    }
-
-    /* Текст слогана */
-    .latin-quote {
-        font-size: 11px !important;
-        line-height: 1.2 !important;
-        white-space: normal !important;
-        word-break: keep-all !important; /* не разбивает слова */
-        text-align: center !important;
-    }
-    .russian-translation {
-        font-size: 9px !important;
-        white-space: normal !important;
-        text-align: center !important;
     }
 }
