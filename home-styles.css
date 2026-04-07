@@ -80,8 +80,19 @@
     position: relative;
     margin-bottom: 20px;
 }
-/* Мобильная адаптация только для главной страницы */
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
+    /* Заставляем body переносить блоки (если не задано в sidebar.css) */
+    body {
+        flex-wrap: wrap;
+    }
+    /* Убираем левый отступ у контента */
+    .main-content-area {
+        margin-left: 0 !important;
+        width: 100%;
+        padding: 0 !important;
+    }
     .slogan-container,
     .slogan-top,
     .content-wrapper {
@@ -111,11 +122,15 @@
         margin-right: 0;
         margin-bottom: 5px;
     }
+    /* Улучшенная адаптация фонового изображения */
     .full-background {
         background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpagemobile3.jpg') !important;
-        background-size: contain;
-        background-position: center;
+        background-size: cover;       /* изображение покрывает всю область, может обрезаться по краям */
+        background-position: center center;
         background-repeat: no-repeat;
-        min-height: 400px;
+        min-height: 300px;            /* уменьшаем минимальную высоту для телефонов */
+        height: auto;
+        /* Если хотите, чтобы изображение было видно полностью без обрезки, замените cover на contain */
+        /* background-size: contain; */
     }
 }
