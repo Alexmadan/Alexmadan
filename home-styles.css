@@ -83,49 +83,39 @@
 
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
     body {
         flex-wrap: wrap;
+        min-height: 100%; /* чтобы гарантировать высоту */
     }
     .main-content-area {
         margin-left: 0 !important;
         width: 100%;
         padding: 0 !important;
-    }
-    .slogan-container,
-    .slogan-top,
-    .content-wrapper {
-        width: 100%;
-        padding: 5px !important;
-        margin: 0 !important;
-        display: block;
-    }
-    .compact-slogan {
-        width: calc(100% - 20px);
-        margin: 0 auto;
-        padding: 6px 10px;
+        flex: 1;
+        display: flex;
         flex-direction: column;
-        box-sizing: border-box;
+        min-height: calc(100vh - ???); /* сложно, лучше другой подход */
     }
-    .latin-quote {
-        font-size: 14px;
-        line-height: 1.2;
-        text-align: center;
-    }
-    .russian-translation {
-        font-size: 12px;
-        text-align: center;
-    }
-    .quote-decoration {
-        font-size: 28px;
-        margin-right: 0;
-        margin-bottom: 5px;
+    ...
+    .content-wrapper {
+        flex: 1;
+        display: flex;
+        padding: 5px !important;
     }
     .full-background {
         background: url('image/Firstpagemobile3.jpg') no-repeat center center !important;
         background-size: contain !important;
-        background-color: #1a252f;   /* тёмный фон – под цвет сайдбара */
-        min-height: 250px;
-        height: auto;
+        background-color: #1a252f;
+        /* убираем min-height, делаем резиновым */
+        flex: 1;
+        min-height: 0;
         width: 100%;
+        margin-bottom: 0;
     }
 }
+   
