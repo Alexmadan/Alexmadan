@@ -63,11 +63,8 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
+
 .mission-paragraphs p {
-    animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
-    animation-delay: calc(var(--paragraph-index) * 0.1s);
     margin-bottom: 20px;
 }
 .back-link {
@@ -91,4 +88,26 @@
     background-color: #cc5500;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
+}
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .main-content-area {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .mission-container {
+        padding: 10px;
+    }
+    .mission-paragraphs {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+    }
+    .mission-main-title {
+        font-size: 2rem;
+    }
+    .back-link a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
 }
