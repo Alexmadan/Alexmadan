@@ -112,28 +112,4 @@
         padding: 8px 20px;
         font-size: 14px;
     }
-/* Мобильная адаптация для страницы "Кампания" */
-@media (max-width: 768px) {
-    .main-content-area {
-        margin-left: 0;
-        padding: 10px;
-    }
-    .mission-container {
-        padding: 5px;
-        max-width: 100%;
-    }
-    .mission-paragraphs {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 15px;
-        font-size: 14px;
-    }
-    .mission-main-title {
-        font-size: 1.8rem;
-    }
-    .back-link a {
-        padding: 8px 20px;
-        font-size: 14px;
-    }
 }
-    
