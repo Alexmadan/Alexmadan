@@ -93,20 +93,56 @@
 
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
+    /* Убираем сетку карточек */
     .contacts-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: block;
+        margin: 20px 0;
     }
 
+    /* Каждую карточку превращаем в простую строку */
     .contact-card {
-        padding: 25px 15px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 10px 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 1px solid #eee;
     }
 
+    .contact-card:last-child {
+        border-bottom: none;
+    }
+
+    /* Иконка слева, маленькая */
     .contact-icon {
-        font-size: 40px;
+        font-size: 28px;
+        margin: 0;
+        width: 40px;
+        text-align: center;
     }
 
+    /* Заголовок и текст — в одну колонку */
     .contact-card h3 {
-        font-size: 20px;
+        font-size: 18px;
+        margin-bottom: 4px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .contact-card p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .contact-note {
+        font-size: 12px;
+    }
+
+    /* Ссылки и текст */
+    .contact-card a {
+        font-size: 14px;
     }
 }
