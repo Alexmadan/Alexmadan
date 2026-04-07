@@ -83,11 +83,9 @@
 
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 768px) {
-    /* Заставляем body переносить блоки (если не задано в sidebar.css) */
     body {
         flex-wrap: wrap;
     }
-    /* Убираем левый отступ у контента */
     .main-content-area {
         margin-left: 0 !important;
         width: 100%;
@@ -122,15 +120,12 @@
         margin-right: 0;
         margin-bottom: 5px;
     }
-    /* Улучшенная адаптация фонового изображения */
     .full-background {
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpagemobile3.jpg') !important;
-        background-size: cover;       /* изображение покрывает всю область, может обрезаться по краям */
-        background-position: center center;
-        background-repeat: no-repeat;
-        min-height: 300px;            /* уменьшаем минимальную высоту для телефонов */
+        background: url('image/Firstpagemobile3.jpg') no-repeat center center !important;
+        background-size: contain !important;
+        background-color: #1a252f;   /* тёмный фон – под цвет сайдбара */
+        min-height: 250px;
         height: auto;
-        /* Если хотите, чтобы изображение было видно полностью без обрезки, замените cover на contain */
-        /* background-size: contain; */
+        width: 100%;
     }
 }
