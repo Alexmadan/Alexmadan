@@ -199,10 +199,18 @@
     background-color: #cc5500;
 }
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ (исправлено смещение вправо) ===== */
 @media (max-width: 768px) {
+    /* Главное исправление: контент на всю ширину, без левого отступа */
+    .main-content-area {
+        margin-left: 0 !important;
+        width: 100%;
+        padding: 0 !important;
+    }
     .content-wrapper {
         padding: 10px;
+        max-width: 100%;
+        margin: 0;
     }
     .page-title {
         font-size: 24px;
@@ -210,7 +218,7 @@
         padding-bottom: 10px;
     }
     .about-container {
-        padding: 10px;
+        padding: 5px;
     }
     .about-item {
         padding: 15px;
@@ -225,7 +233,7 @@
         padding-left: 20px;
     }
     .about-list strong {
-        display: inline; /* убираем фиксированную ширину, чтобы текст не ломался */
+        display: inline; /* убираем фиксированную ширину */
         width: auto;
     }
     .value-card {
@@ -243,8 +251,8 @@
         justify-content: center;
     }
     .team-member {
-        width: calc(100% - 20px); /* одна колонка на телефоне */
-        max-width: 300px;          /* чтобы карточки не были слишком широкими */
+        width: calc(100% - 20px);
+        max-width: 300px;
         margin: 10px auto;
     }
     .photo-placeholder {
@@ -265,7 +273,7 @@
         padding: 8px 20px;
         font-size: 14px;
     }
-    /* Отключаем анимации на мобильных для плавности */
+    /* Отключаем анимации на мобильных */
     .about-item:hover,
     .value-card:hover,
     .team-member:hover {
@@ -273,7 +281,7 @@
     }
 }
 
-/* Для планшетов (необязательно, но можно оставить) */
+/* Планшеты */
 @media (min-width: 769px) and (max-width: 1024px) {
     .team-member {
         width: calc(50% - 20px);
