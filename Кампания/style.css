@@ -89,7 +89,7 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(255, 107, 0, 0.3);
 }
-/* Мобильная адаптация для сайдбара */
+/* Мобильная адаптация для страницы Кампания */
 @media (max-width: 768px) {
     .main-content-area {
         margin-left: 0;
