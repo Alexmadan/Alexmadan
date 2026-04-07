@@ -92,8 +92,8 @@
     margin: 20px 0;
 }
 .value-card {
-    width: 100%;             
-    max-width: 600px;         
+    width: 100%;
+    max-width: 600px;
     background: white;
     border-radius: 8px;
     padding: 20px 25px;
@@ -118,16 +118,15 @@
 }
 .value-card h4 {
     color: #2c3e50;
-    font-size: 1.6rem;       /* немного крупнее */
+    font-size: 1.6rem;
     margin-bottom: 10px;
     font-weight: 600;
 }
 .value-card p {
-    font-size: 1.4rem;       /* комфортный размер */
+    font-size: 1.4rem;
     color: #555;
     margin: 0;
     line-height: 1.5;
-    /* текст будет переноситься по умолчанию */
 }
 
 /* ===== КОМАНДА ===== */
@@ -199,6 +198,87 @@
 .back-link a:hover {
     background-color: #cc5500;
 }
-.about-item.values-item::before {
-    display: none;
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 10px;
+    }
+    .page-title {
+        font-size: 24px;
+        margin: 20px auto;
+        padding-bottom: 10px;
+    }
+    .about-container {
+        padding: 10px;
+    }
+    .about-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .about-subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    .about-list li {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    .about-list strong {
+        display: inline; /* убираем фиксированную ширину, чтобы текст не ломался */
+        width: auto;
+    }
+    .value-card {
+        padding: 15px;
+        max-width: 100%;
+    }
+    .value-card h4 {
+        font-size: 1.3rem;
+    }
+    .value-card p {
+        font-size: 1rem;
+    }
+    .team-container {
+        margin: 0;
+        justify-content: center;
+    }
+    .team-member {
+        width: calc(100% - 20px); /* одна колонка на телефоне */
+        max-width: 300px;          /* чтобы карточки не были слишком широкими */
+        margin: 10px auto;
+    }
+    .photo-placeholder {
+        width: 120px;
+        height: 140px;
+    }
+    .team-member h4 {
+        font-size: 1.3rem;
+    }
+    .team-member p {
+        font-size: 1rem;
+    }
+    .back-link {
+        margin: 30px auto;
+        padding: 10px;
+    }
+    .back-link a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    /* Отключаем анимации на мобильных для плавности */
+    .about-item:hover,
+    .value-card:hover,
+    .team-member:hover {
+        transform: none;
+    }
+}
+
+/* Для планшетов (необязательно, но можно оставить) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .team-member {
+        width: calc(50% - 20px);
+    }
+    .value-card {
+        max-width: 100%;
+    }
 }
