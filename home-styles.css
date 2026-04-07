@@ -41,7 +41,6 @@
     justify-content: center;
     min-height: 40px;
 }
-
 .slogan-text {
     margin: 0;
     display: flex;
@@ -81,20 +80,8 @@
     position: relative;
     margin-bottom: 20px;
 }
-/* Мобильная адаптация — без нежностей */
+/* Мобильная адаптация только для главной страницы */
 @media (max-width: 768px) {
-    /* Сайдбар (управляется из sidebar.css, но продублируем на всякий) */
-    .common-sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 10px;
-    }
-    .main-content-area {
-        margin-left: 0;
-        padding: 10px;
-    }
-    /* Контейнеры слогана — на всю ширину */
     .slogan-container,
     .slogan-top,
     .content-wrapper {
@@ -103,7 +90,6 @@
         margin: 0 !important;
         display: block;
     }
-    /* Сам блок слогана — резина */
     .compact-slogan {
         width: calc(100% - 20px);
         margin: 0 auto;
@@ -111,7 +97,6 @@
         flex-direction: column;
         box-sizing: border-box;
     }
-    /* Текст слогана — читаемый */
     .latin-quote {
         font-size: 14px;
         line-height: 1.2;
@@ -126,12 +111,11 @@
         margin-right: 0;
         margin-bottom: 5px;
     }
-    /* Фоновая картинка — не обрезаем, но масштабируем */
     .full-background {
-        min-height: 400px;
-        background-size: contain; /* чтобы картинка целиком влезала, но могут быть полосы */
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpagemobile3.jpg') !important;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        min-height: 400px;
     }
 }
-
