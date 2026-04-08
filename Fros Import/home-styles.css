@@ -1,3 +1,4 @@
+/* ===== ОСНОВНЫЕ СТИЛИ ГЛАВНОЙ СТРАНИЦЫ ===== */
 .main-content-area {
     margin-left: 220px;
     min-height: 100vh;
@@ -41,7 +42,6 @@
     justify-content: center;
     min-height: 40px;
 }
-
 .slogan-text {
     margin: 0;
     display: flex;
@@ -82,235 +82,43 @@
     margin-bottom: 20px;
 }
 
-/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
-/* Для планшетов и телефонов (ширина до 768px) */
+/* Мобильная адаптация только для главной страницы (специфичные элементы) */
 @media (max-width: 768px) {
-    /* Основной контент */
-    .main-content-area {
-        margin-left: 0;
-        min-height: auto;
-    }
-    
-    /* Слоган */
-    .slogan-container {
-        padding: 10px;
-    }
-    
+    .slogan-container,
     .slogan-top {
-        padding: 10px;
+        padding: 5px !important;
+        margin: 0 !important;
     }
-    
     .compact-slogan {
-        padding: 10px 15px;
-        max-width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 8px;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .quote-decoration {
-        font-size: 28px;
-        margin-right: 0;
-        margin-bottom: 0;
-        line-height: 1;
-    }
-    
-    .slogan-text {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 5px 10px;
-    }
-    
-    .latin-quote {
-        font-size: 14px;
-        margin: 0;
-        white-space: normal;
-        display: inline-block;
-    }
-    
-    .russian-translation {
-        font-size: 12px;
-        margin: 0;
-        white-space: normal;
-        display: inline-block;
-    }
-    
-    /* Контентная область */
-    .content-wrapper {
-        padding: 0 10px 10px 10px;
-    }
-    
-    /* Фоновое изображение */
-    .full-background {
-        min-height: 400px;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        background-attachment: scroll;
-    }
-}
-
-/* Для очень маленьких экранов (до 480px) */
-@media (max-width: 480px) {
-    .compact-slogan {
-        padding: 8px 12px;
-        gap: 5px;
-    }
-    
-    .quote-decoration {
-        font-size: 22px;
-        display: inline-block;
-    }
-    
-    .slogan-text {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        padding: 6px 10px;
         flex-direction: column;
-        gap: 3px;
     }
-    
     .latin-quote {
         font-size: 12px;
         text-align: center;
     }
-    
     .russian-translation {
         font-size: 11px;
         text-align: center;
     }
-    
-    .full-background {
-        min-height: 300px;
-    }
-}
-
-/* Для экранов от 481px до 768px (оптимизация для планшетов) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .slogan-text {
-        flex-direction: row;
-    }
-    
-    .latin-quote::after {
-        content: "—";
-        margin: 0 8px;
-    }
-    
-    .full-background {
-        min-height: 450px;
-    }@media (max-width: 768px) {
-    .main-content-area {
-        margin-left: 0;
-        min-height: auto;
-    }
-
-    .slogan-container {
-        padding: 10px;
-    }
-
-    .slogan-top {
-        padding: 10px;
-    }
-
-    .compact-slogan {
-        padding: 10px 15px;
-        max-width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 8px;
-        align-items: center;
-        justify-content: center;
-    }
-
     .quote-decoration {
-        font-size: 28px;
+        font-size: 24px;
         margin-right: 0;
-        margin-bottom: 0;
-        line-height: 1;
+        margin-bottom: 3px;
     }
-
-    .slogan-text {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 5px 10px;
-    }
-
-    .latin-quote {
-        font-size: 14px;
-        margin: 0;
-        white-space: normal;
-        display: inline-block;
-    }
-
-    .russian-translation {
-        font-size: 12px;
-        margin: 0;
-        white-space: normal;
-        display: inline-block;
-    }
-
     .content-wrapper {
-        padding: 0 10px 10px 10px;
-    }
-
-    .full-background {
-        min-height: 400px;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        background-attachment: scroll;
-    }
-}
-
-@media (max-width: 480px) {
-    .compact-slogan {
-        padding: 8px 12px;
-        gap: 5px;
-    }
-
-    .quote-decoration {
-        font-size: 22px;
-        display: inline-block;
-    }
-
-    .slogan-text {
+        flex: 1;
+        padding: 0 10px 10px 10px !important;
+        display: flex;
         flex-direction: column;
-        gap: 3px;
     }
-
-    .latin-quote {
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .russian-translation {
-        font-size: 11px;
-        text-align: center;
-    }
-
     .full-background {
-        min-height: 300px;
+        background: url('image/Firstpagemobile3.jpg') center center / contain no-repeat !important;
+        background-color: #1a252f;
+        min-height: 250px;
+        flex: 1;
+        margin-bottom: 0;
     }
-}
-
-/* Планшеты (опционально) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .slogan-text {
-        flex-direction: row;
-    }
-
-    .latin-quote::after {
-        content: "—";
-        margin: 0 8px;
-    }
-
-    .full-background {
-        min-height: 450px;
-    }
-    
 }
