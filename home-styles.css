@@ -1,195 +1,151 @@
-/* ===== ОСНОВНЫЕ СТИЛИ ГЛАВНОЙ СТРАНИЦЫ ===== */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background: #f5f5f5;
+}
+.common-sidebar {
+    width: 220px;
+    background: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;    
+}
+.common-logo-container {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff6b00;
+}
+.common-logo {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+.common-nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.common-nav-link {
+    text-decoration: none;
+    color: #b0b0b0;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-left: 3px solid transparent;
+    margin-bottom: 8px;    
+}
+.common-nav-link:last-child {
+    margin-bottom: 0;
+}
+.common-nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(5px);
+}
+.common-nav-link.active {
+    background: rgba(255, 107, 0, 0.2);
+    color: white;
+    border-left-color: #ff6b00;
+}
+.common-nav-link.active::before {
+    content: "\25B6";
+    position: absolute;
+    right: 15px;
+    color: #ff6b00;
+}
+/* Для страниц без логотипа */
+.common-sidebar.without-logo .common-nav {
+    margin-top: 0;
+}
 .main-content-area {
     margin-left: 220px;
+    flex: 1;
     min-height: 100vh;
     position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.slogan-container {
-    padding: 15px 20px 10px 20px;
-    background-color: #f5f5f5;
-    flex-shrink: 0;
-    z-index: 2;
-}
-.slogan-top {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 15px 20px 10px 20px;
-    z-index: 3;
-    position: relative;
-}
-.content-wrapper {
-    flex: 1;
-    display: flex;
-    padding: 0 20px 20px 20px;
-    box-sizing: border-box;
-}
-.compact-slogan {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    padding: 8px 15px;
-    max-width: 900px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    border: 3px solid #ff6b00;
-    box-sizing: border-box;
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-}
-.slogan-text {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.latin-quote {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 16px;
-    font-style: italic;
-    color: #cc5500;
-    line-height: 1.1;
-    margin: 0 0 3px 0;
-    font-weight: 600;
-}
-.russian-translation {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.1;
-    margin: 0;
-    font-weight: 500;
-}
-.quote-decoration {
-    font-size: 40px;
-    color: #ff6b00;
-    font-family: 'Georgia', serif;
-    margin-right: 10px;
-    line-height: 1;
-    opacity: 0.7;
-}
-.full-background {
-    width: 100%;
-    min-height: 800px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.03) 100%), url('image/Firstpage3.png') center center / cover no-repeat;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-bottom: 20px;
 }
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+/* --- Адаптация для телефонов --- */
 @media (max-width: 768px) {
     body {
         flex-wrap: wrap;
-    }
-    .main-content-area {
-        margin-left: 0 !important;
-        width: 100%;
-        padding: 0 !important;
-        display: flex;
         flex-direction: column;
-        min-height: 100vh;
     }
-    
-    /* Сайдбар в одну строку с логотипом */
     .common-sidebar {
         width: 100%;
         position: relative;
         height: auto;
         padding: 10px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    
-    /* Контейнер логотипа */
-    .common-logo-container {
         margin-bottom: 0;
-        padding: 5px 10px;
-        width: auto;
-        max-width: 120px;
-        background: white;
-        border-radius: 8px;
-        border: 2px solid #ff6b00;
+        flex-direction: column;
     }
-    
+    .main-content-area {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    .common-logo-container {
+        margin-bottom: 10px;
+        padding: 8px;
+        max-width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .common-logo {
         max-width: 100px;
-        height: auto;
     }
-    
-    /* Навигация - горизонтальная, рядом с логотипом */
     .common-nav {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-end;
-        flex: 1;
+        justify-content: center;
+        gap: 5px; /* если Brackets не поддерживает, замените на margin у ссылок */
     }
-    
     .common-nav-link {
         padding: 6px 10px;
         font-size: 12px;
         margin-bottom: 0;
-        margin-right: 5px;  /* заменяем gap на margin */
+        margin-right: 5px;
         width: auto;
         white-space: nowrap;
     }
-    
     .common-nav-link:last-child {
-        margin-right: 0;  /* у последней ссылки убираем отступ */
-    }
-    
-    /* Слоган */
-    .slogan-container,
-    .slogan-top {
-        padding: 10px !important;
-        margin: 0 !important;
-    }
-    
-    .compact-slogan {
-        width: calc(100% - 20px);
-        margin: 0 auto;
-        padding: 8px 12px;
-        flex-direction: column;
-    }
-    
-    .latin-quote {
-        font-size: 12px;
-        text-align: center;
-    }
-    
-    .russian-translation {
-        font-size: 11px;
-        text-align: center;
-    }
-    
-    .quote-decoration {
-        font-size: 24px;
         margin-right: 0;
-        margin-bottom: 3px;
     }
-    
-    /* Контейнер с фоновым изображением - на всю оставшуюся высоту */
-    .content-wrapper {
-        flex: 1;
-        padding: 0 10px 10px 10px !important;
-        display: flex;
-        flex-direction: column;
+    /* Убираем треугольник на мобильных */
+    .common-nav-link.active::before {
+        content: none;
     }
-    
-    .full-background {
-        background: url('image/Firstpagemobile3.jpg') center center / contain no-repeat !important;
-        background-color: #1a252f;
-        min-height: 0;
-        flex: 1;
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 0;
+    /* Активная ссылка подчёркивается снизу */
+    .common-nav-link.active {
+        border-left-color: transparent;
+        border-bottom: 2px solid #ff6b00;
+        border-radius: 0;
+    }
+    /* Для страниц без логотипа – компактнее */
+    .common-sidebar.without-logo {
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
