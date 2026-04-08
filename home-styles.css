@@ -91,41 +91,105 @@
         margin-left: 0 !important;
         width: 100%;
         padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
-    .slogan-container,
-    .slogan-top,
-    .content-wrapper {
+    
+    /* Сайдбар в одну строку с логотипом */
+    .common-sidebar {
         width: 100%;
-        padding: 5px !important;
-        margin: 0 !important;
-        display: block;
+        position: relative;
+        height: auto;
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
+    
+    /* Контейнер логотипа */
+    .common-logo-container {
+        margin-bottom: 0;
+        padding: 5px 10px;
+        width: auto;
+        max-width: 120px;
+        background: white;
+        border-radius: 8px;
+        border: 2px solid #ff6b00;
+    }
+    
+    .common-logo {
+        max-width: 100px;
+        height: auto;
+    }
+    
+    /* Навигация - горизонтальная, рядом с логотипом */
+    .common-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        flex: 1;
+    }
+    
+    .common-nav-link {
+        padding: 6px 10px;
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-right: 5px;  /* заменяем gap на margin */
+        width: auto;
+        white-space: nowrap;
+    }
+    
+    .common-nav-link:last-child {
+        margin-right: 0;  /* у последней ссылки убираем отступ */
+    }
+    
+    /* Слоган */
+    .slogan-container,
+    .slogan-top {
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+    
     .compact-slogan {
         width: calc(100% - 20px);
         margin: 0 auto;
-        padding: 6px 10px;
+        padding: 8px 12px;
         flex-direction: column;
-        box-sizing: border-box;
     }
+    
     .latin-quote {
-        font-size: 14px;
-        line-height: 1.2;
-        text-align: center;
-    }
-    .russian-translation {
         font-size: 12px;
         text-align: center;
     }
-    .quote-decoration {
-        font-size: 28px;
-        margin-right: 0;
-        margin-bottom: 5px;
+    
+    .russian-translation {
+        font-size: 11px;
+        text-align: center;
     }
+    
+    .quote-decoration {
+        font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+    
+    /* Контейнер с фоновым изображением - на всю оставшуюся высоту */
+    .content-wrapper {
+        flex: 1;
+        padding: 0 10px 10px 10px !important;
+        display: flex;
+        flex-direction: column;
+    }
+    
     .full-background {
-        background: url('image/Firstpagemobile3.jpg') center center / cover no-repeat !important;
-        /* cover — заполняет весь блок, возможна небольшая обрезка по краям */
-        min-height: 350px;  /* комфортная высота для мобильных */
+        background: url('image/Firstpagemobile3.jpg') center center / contain no-repeat !important;
+        background-color: #1a252f;
+        min-height: 0;
+        flex: 1;
+        width: 100%;
         border-radius: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 0;
     }
 }
