@@ -82,10 +82,12 @@ body {
     min-height: 100vh;
     position: relative;
 }
+
 /* --- Адаптация для телефонов --- */
 @media (max-width: 768px) {
     body {
         flex-wrap: wrap;
+        flex-direction: column;
     }
     .common-sidebar {
         width: 100%;
@@ -93,33 +95,44 @@ body {
         height: auto;
         padding: 10px;
         margin-bottom: 0;
+        flex-direction: column;  /* вертикально на мобильных по умолчанию */
     }
     .main-content-area {
         margin-left: 0;
         width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
     .common-logo-container {
-        margin-bottom: 15px;
-        padding: 10px;
+        margin-bottom: 10px;
+        padding: 8px;
+        max-width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .common-logo {
+        max-width: 100px;
     }
     .common-nav {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5px;
     }
     .common-nav-link {
-        padding: 8px 12px;
-        font-size: 14px;
+        padding: 6px 10px;
+        font-size: 12px;
         margin-bottom: 0;
+        margin-right: 5px;
         width: auto;
+        white-space: nowrap;
     }
-    /* Убираем треугольник, который налезал на текст */
+    .common-nav-link:last-child {
+        margin-right: 0;
+    }
+    /* Убираем треугольник на мобильных */
     .common-nav-link.active::before {
         content: none;
     }
-    /* Активная ссылка теперь подчёркивается снизу (аккуратно) */
+    /* Активная ссылка подчёркивается снизу */
     .common-nav-link.active {
         border-left-color: transparent;
         border-bottom: 2px solid #ff6b00;
