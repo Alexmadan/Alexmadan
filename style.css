@@ -84,30 +84,40 @@ border: 2px solid #ff6b00;
 }
 /* --- Адаптация для телефонов --- */
 @media (max-width: 768px) {
-    .common-sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 10px;
+    .slogan-container,
+    .slogan-top {
+        padding: 5px !important;
+        margin: 0 !important;
     }
-    .main-content-area {
-        margin-left: 0;
-        padding: 15px;
+    .compact-slogan {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        padding: 6px 10px;
+        flex-direction: column;
     }
-    .common-logo-container {
-        margin-bottom: 15px;
-        padding: 10px;
+    .latin-quote {
+        font-size: 12px;
+        text-align: center;
     }
-    .common-nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
+    .russian-translation {
+        font-size: 11px;
+        text-align: center;
     }
-    .common-nav-link {
-        padding: 8px 12px;
-        font-size: 14px;
+    .quote-decoration {
+        font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+    .content-wrapper {
+        flex: 1;
+        padding: 0 10px 10px 10px !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .full-background {
+        background: url('image/Firstpage3.png') center center / cover no-repeat !important;
+        min-height: 300px;
+        flex: 1;
         margin-bottom: 0;
-        width: auto;
     }
 }
