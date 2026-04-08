@@ -125,3 +125,14 @@
         padding: 10px !important;
     }
 }
+@media (max-width: 768px) {
+    .common-sidebar {
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .common-nav {
+        justify-content: center;
+    }
+    /* остальные ваши стили */
+}
